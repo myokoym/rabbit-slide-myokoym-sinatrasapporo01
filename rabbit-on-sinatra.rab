@@ -1,0 +1,233 @@
+= Rabbit on Sinatra
+
+: subtitle
+   プレゼン用PDF作成ツールrab2pdf
+: author
+   Masafumi Yokoyama
+# : institution
+#    INSTITUTION
+: content-source
+   勉強会＠Sinatra札幌
+: date
+   2013/11/24
+: allotted-time
+   18m
+: theme
+   lightning-clear-blue
+
+= Powered by
+
+  # image
+  # src = https://raw.github.com/rabbit-shocker/rabbit/master/sample/lavie.png
+  # relative_height = 100
+  # title = Rabbit
+
+= 自己紹介
+
+  * Rubyist
+  * Software Developer
+    * SinatraでWebアプリ
+    * Ruby-GNOME2でGUIアプリ
+    * MiddlemanでWebサイト
+
+= 話すこと
+
+  * SinatraでRabbitを動かした話
+    * (('wait'))今も動きます
+
+= Rabbit
+
+プレゼンテーションツール
+
+  * 実装: Ruby/GTK+ 2/cairo
+  * 動作: PC-UNIX/Win/Mac
+  * 書式:\n
+    RD/Wiki/Markdown/PDF
+  * 見た目: Ruby(('note:（ソースと分離）'))
+
+= (('del:昨日'))((*機能*))(('sub:が'))(('tag:italic:豊富'))
+
+  # RT
+  caption = キーバインドの一部
+
+  一覧, 情報, メニュー
+
+  i（小文字）, I（大文字）, 右クリック
+
+(('tag:small'))
+    http://rabbit-shocker.org/ja/sample/rd/rabbit.html
+
+= インストールも簡単
+
+    gem install rabbit
+
+== プロパティ
+
+:as_large_as_possible
+  false
+
+= だけど。。。
+
+== プロパティ
+
+:as_large_as_possible
+  false
+
+= 借りたPCで、そもそも\nRubyが入ってないとか。。。
+
+== プロパティ
+
+:as_large_as_possible
+  false
+
+= プレゼンまで時間がない！
+
+== プロパティ
+
+:as_large_as_possible
+  false
+
+= そんなとき
+
+== プロパティ
+
+:as_large_as_possible
+  false
+
+= rab2pdf
+
+= rab2pdf
+
+  * Webアプリケーション
+  * RabbitのPDF生成機能を活用
+    * テキストからプレゼン用PDFを作成
+
+= サーバーの仕事
+
+  * Rabbitはインストール済み
+  * リクエストはSinatraで処理
+  * SinatraからRabbitを実行
+    * PDFを生成
+
+= 余談
+
+RabbitはGUIアプリケーションですが、
+GUI環境がなくても動くように工夫されています。
+
+なので、Webアプリケーションのバックグラウンド
+としても使うことができます。
+
+= 使い方
+
+  (1) RD形式のテキストを書く
+  (2) rab2pdfに送信
+  (3) 生成されたPDFをダウンロード
+
+= デモ
+
+    http://myokoym.net/rab2pdf
+
+= 使える書式
+
+  * 現在はRD形式のみ対応
+    * RabbitはWikiやMarkdownに対応
+    * rab2pdfでも対応したい
+    * pull request歓迎
+
+= 使えるテーマ
+
+  * Rabbit組み込みのテーマ
+  * RubyGems.orgに\n公開されているテーマ
+    * 新しく作ったら教えてください
+
+= ソースコード
+
+  * オープンソース（GPLv2+）
+  * GitHubで公開
+        https://github.com/myokoym/rab2pdf
+
+= トップページ
+
+  # coderay ruby
+
+  get "/" do
+    @params ||= {}
+    @params[:source] = slide_source
+    haml :index
+  end
+
+= slide_source
+
+  # coderay ruby
+
+  = TITLE
+
+  : author
+  Your Name
+  : date
+  #{Time.now.strftime("%Y/%m/%d")}
+
+  = FIRST SLIDE
+
+  * ITEM 1
+  * ITEM 2
+
+= フォーム（Haml）
+
+  # coderay ruby
+
+  %form{:action => url("/convert", false, true),
+        :method => "post"}
+    %p
+      %textarea{:name => "source",
+                :cols => 50,
+                :rows => 10}= @params[:source]
+    %p
+      %input{:type  => "text",
+             :name  => "filename",
+             :size  => 30,
+             :value => @params[:filename]}
+    %p
+      %input{:type => "submit"}
+
+= PDF生成
+
+  # coderay ruby
+
+  post "/convert" do
+    @download_url = convert(params[:source],
+                            params[:filename])
+    @params = params
+    haml :index
+  end
+
+= Rabbit.run
+
+  # coderay ruby
+
+  def convert(source, filename)
+    ...
+    Tempfile.open(["rab2pdf", ".rab"]) do |tempfile|
+      tempfile.puts(source)
+      tempfile.flush
+      Rabbit::Command::Rabbit.run("--print",
+                                  "--output-filename",
+                                  pdf_path,
+                                  tempfile.path)
+    end
+    ...
+  end
+
+= 隠し機能
+
+: Gitリポジトリ指定機能
+   * ローカルテーマや画像に対応
+         http://myokoym.net/rab2pdf/git?url=https://github.com/user/repo
+
+= Thank you
+
+rab2pdfはあくまで入門用＆緊急用のツールなので、
+機能が少ないです。可能ならRabbitをインストール
+して使うことをおすすめします。 :-)
+
+    http://rabbit-shocker.org/

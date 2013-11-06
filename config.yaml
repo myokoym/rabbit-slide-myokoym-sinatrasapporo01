@@ -1,0 +1,22 @@
+---
+id: sinatrasapporo01
+base_name: rabbit-on-sinatra
+tags:
+- rabbit
+- sinatrasapporo
+presentation_date: 2013/11/24
+version: 2013.11.24.0
+licenses:
+- GPLv2+
+- CC BY-SA 3.0
+slideshare_id: 
+speaker_deck_id: 
+ustream_id: 
+vimeo_id: 
+author:
+  markup_language: :rd
+  name: Masafumi Yokoyama
+  email: myokoym@gmail.com
+  rubygems_user: myokoym
+  slideshare_user: myokoym
+  speaker_deck_user: myokoym
