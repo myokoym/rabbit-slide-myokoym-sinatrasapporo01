@@ -59,11 +59,6 @@
 
     gem install rabbit
 
-== プロパティ
-
-:as_large_as_possible
-  false
-
 = だけど。。。
 
 == プロパティ
