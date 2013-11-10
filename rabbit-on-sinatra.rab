@@ -135,8 +135,7 @@ GUI環境がなくても動くように工夫されています。
 
   * オープンソース（GPLv2+）
   * GitHubで公開
-
-(('note:https://github.com/myokoym/rab2pdf'))
+    * (('note:https://github.com/myokoym/rab2pdf'))
 
 = トップページ
 
@@ -213,8 +212,9 @@ GUI環境がなくても動くように工夫されています。
 = 隠し機能
 
 : Gitリポジトリ指定機能
-   * ローカルテーマや画像に対応
-         http://myokoym.net/rab2pdf/git?url=https://github.com/user/repo
+   ローカルテーマや画像に対応
+
+    http://myokoym.net/rab2pdf/git?url=https://github.com/user/repo
 
 = Thank you
 
