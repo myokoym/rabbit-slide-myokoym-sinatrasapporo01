@@ -125,13 +125,11 @@ GUI環境がなくても動くように工夫されています。
   * 現在はRD形式のみ対応
     * RabbitはWikiやMarkdownに対応
     * rab2pdfでも対応したい
-    * pull request歓迎
 
 = 使えるテーマ
 
   * Rabbit組み込みのテーマ
   * RubyGems.orgに\n公開されているテーマ
-    * 新しく作ったら教えてください
 
 = ソースコード
 
