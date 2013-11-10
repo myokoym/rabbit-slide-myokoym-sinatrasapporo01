@@ -53,8 +53,7 @@
 
   i（小文字）, I（大文字）, 右クリック
 
-(('tag:small'))
-    http://rabbit-shocker.org/ja/sample/rd/rabbit.html
+(('note:http://rabbit-shocker.org/ja/sample/rd/rabbit.html'))
 
 = インストールも簡単
 
@@ -124,7 +123,7 @@ GUI環境がなくても動くように工夫されています。
 
 = デモ
 
-    http://myokoym.net/rab2pdf
+(('note:http://myokoym.net/rab2pdf'))
 
 = 使える書式
 
@@ -143,7 +142,8 @@ GUI環境がなくても動くように工夫されています。
 
   * オープンソース（GPLv2+）
   * GitHubで公開
-        https://github.com/myokoym/rab2pdf
+
+(('note:https://github.com/myokoym/rab2pdf'))
 
 = トップページ
 
@@ -229,4 +229,4 @@ rab2pdfはあくまで入門用＆緊急用のツールなので、
 機能が少ないです。可能ならRabbitをインストール
 して使うことをおすすめします。 :-)
 
-    http://rabbit-shocker.org/
+(('note:http://rabbit-shocker.org/'))
