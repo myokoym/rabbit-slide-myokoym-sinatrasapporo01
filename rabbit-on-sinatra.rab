@@ -4,16 +4,30 @@
    プレゼン用PDF作成ツールrab2pdf
 : author
    横山昌史
-# : institution
-#    INSTITUTION
+: institution
+   Rabbitショッカー
 : content-source
    勉強会＠Sinatra札幌
 : date
    2013/11/24
 : allotted-time
-   18m
+   20m
 : theme
    nyankosakana
+
+= 自己紹介
+
+  * ソフトウェア開発者
+    * Webアプリの主戦場はSinatra
+  * Rabbitショッカー
+    * 札幌で一番Rabbitを使っている
+  * Rabbitコミッター
+    * 札幌で一番Rabbitにコミットしている
+
+= 話すこと
+
+  * RabbitをSinatraで動かした話
+    * 今も動きます
 
 = Powered by
 
@@ -21,28 +35,23 @@
   # src = https://raw.github.com/rabbit-shocker/rabbit/master/sample/lavie.png
   # relative_height = 100
 
-= 自己紹介
+== プロパティ
 
-  * Rubyist
-  * Software Developer
-    * SinatraでWebアプリ
-    * Ruby-GNOME2でGUIアプリ
-    * MiddlemanでWebサイト
+:enable-title-on-image
+  false
 
-= 話すこと
+= Rabbitとは
 
-  * SinatraでRabbitを動かした話
-    * 今も動きます
+  # blockquote
+  Rubyで書かれた((*プログラマー向け*))のプレゼンテーションツール
 
-= Rabbit
+= Rabbitの特徴
 
-プレゼンテーションツール
-
-  * 実装: Ruby/GTK+ 2/cairo
-  * 動作: PC-UNIX/Win/Mac
-  * 書式:\n
-    RD/Wiki/Markdown/PDF
-  * 見た目: Ruby(('note:（ソースと分離）'))
+  * 文章はテキストで記述
+    * RD、Wiki、Markdownなど
+  * 装飾（テーマ）はRubyで記述
+    * RubyGemsで簡単に追加
+  * バージョン管理しやすい
 
 = (('del:昨日'))((*機能*))(('sub:が'))(('tag:italic:豊富'))
 
@@ -59,37 +68,28 @@
 
     gem install rabbit
 
-= だけど。。。
+= だけど、インストールする\n前に試してみたいとか
 
 == プロパティ
 
 :as_large_as_possible
   false
 
-= インストールする前に\n試してみたいとか。。。
+= 借りたPCで、そもそも\nRubyが入ってないとか、\nそんなとき
 
 == プロパティ
 
 :as_large_as_possible
   false
 
-= 借りたPCで、そもそも\nRubyが入ってないとか。。。
+= rab2pdfですよ
 
 == プロパティ
 
 :as_large_as_possible
-  false
+  true
 
-= そんなとき
-
-== プロパティ
-
-:as_large_as_possible
-  false
-
-= rab2pdf
-
-= rab2pdf
+= rab2pdfとは
 
   * Webアプリケーション
   * RabbitのPDF生成機能を活用
@@ -110,22 +110,52 @@ GUI環境がなくても動くように工夫されています。
 なので、Webアプリケーションのバックグラウンド
 としても使うことができます。
 
-= 使い方
+= 本題
 
-  (1) RD形式のテキストを書く
+  # image
+  # src = http://d3j5vwomefv46c.cloudfront.net/photos/large/757398619.jpg
+  # relative_height = 100
+  # reflect_ratio = 0.1
+
+== プロパティ
+
+:enable-title-on-image
+  true
+
+= 作り方
+
+  (1) テキストを書く
   (2) rab2pdfに送信
-  (3) 生成されたPDFをダウンロード
+  (3) PDFをダウンロード
+
+= 1. テキストを書く
+
+  * 現在はRD形式のみ対応
+    * RabbitはWikiやMarkdownに対応
+    * rab2pdfでも対応したい
+
+= 2. rab2pdfに送信
+
+  * 普通のフォーム
+    * 普通のテキストエリア
+    * 普通の送信ボタン
+
+= 3. PDFをダウンロード
+
+  * ダウンロードリンクが表示される
+  * PDFはしばらくサーバーに残る
+
+= 隠し機能
+
+: Gitリポジトリ指定機能
+   ローカルテーマや画像に対応
+
+    http://myokoym.net/rab2pdf/git?url=https://github.com/user/repo
 
 = デモ
 
 (('tag:center'))
 (('note:http://myokoym.net/rab2pdf/'))
-
-= 使える書式
-
-  * 現在はRD形式のみ対応
-    * RabbitはWikiやMarkdownに対応
-    * rab2pdfでも対応したい
 
 = 使えるテーマ
 
@@ -209,13 +239,6 @@ GUI環境がなくても動くように工夫されています。
     end
     ...
   end
-
-= 隠し機能
-
-: Gitリポジトリ指定機能
-   ローカルテーマや画像に対応
-
-    http://myokoym.net/rab2pdf/git?url=https://github.com/user/repo
 
 = Thank you
 
