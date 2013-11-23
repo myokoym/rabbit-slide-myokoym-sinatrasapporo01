@@ -20,9 +20,28 @@
   * ソフトウェア開発者
     * Webアプリの主戦場はSinatra
   * Rabbitショッカー
-    * 札幌で一番Rabbitを使っている
+    * 札幌でRabbitを使っている
   * Rabbitコミッター
-    * 札幌で一番Rabbitにコミットしている
+    * 札幌でRabbitにコミットしている
+
+= 宣伝
+
+== プロパティ
+
+:as_large_as_possible
+  true
+
+= 札幌市中央区Ruby会議01 2014年2月8日（土）
+
+  # image
+  # src = http://myokoym.net/public/chuork01-ss.png
+  # relative_height = 100
+  # reflect_ratio = 0.1
+
+== プロパティ
+
+:enable-title-on-image
+  true
 
 = 話すこと
 
