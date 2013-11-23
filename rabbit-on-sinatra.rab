@@ -45,8 +45,13 @@
 
 = 話すこと
 
-  * RabbitをSinatraで動かした話
-    * 今も動きます
+  * Rabbitを
+  * Sinatraで動かした話
+
+= 話すこと
+
+  * ((*Rabbitを*))
+  * Sinatraで動かした話
 
 = Powered by
 
@@ -101,11 +106,21 @@
 :as_large_as_possible
   false
 
-= rab2pdfですよ
+= 話すこと
+
+  * Rabbitを
+  * ((*Sinatraで動かした話*))
+
+= rab2pdf
+
+  # image
+  # src = http://myokoym.net/public/rab2pdf-ss.png
+  # relative_height = 100
+  # reflect_ratio = 0.1
 
 == プロパティ
 
-:as_large_as_possible
+:enable-title-on-image
   true
 
 = rab2pdfとは
