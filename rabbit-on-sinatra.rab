@@ -111,7 +111,7 @@
   * Rabbitを
   * ((*Sinatraで動かした話*))
 
-= rab2pdf
+= Rabbit + Sinatra = rab2pdf
 
   # image
   # src = http://myokoym.net/public/rab2pdf-ss.png
